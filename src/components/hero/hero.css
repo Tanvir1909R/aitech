@@ -1,0 +1,15 @@
+.heroSection{
+    background: url(../../Media/hero-banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* .heroText h1{
+    line-height: 4.7rem;
+} */
+/* @media(max-width:640px){
+    .heroText h1{
+        line-height: normal;
+    }
+} */

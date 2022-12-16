@@ -1,0 +1,40 @@
+.price{
+    transition: all .3s ease;
+    transform:translateY(10px)
+}
+.card:hover .price{
+    transform:translateY(-10px)
+}
+
+.hart{
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all .3s ease;
+    background-color: white;
+    color: black;
+}
+
+.card:hover .hart{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.hart:hover{
+    background-color: black;
+    color: white;
+}
+@media(max-width:1024px){
+    .price{
+        transition: all .3s ease;
+        transform:translateY(0px)
+    }
+    .card:hover .price{
+        transform:translateY(0px)
+    }
+    .hart{
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all .3s ease;
+        background-color: white;
+        color: black;
+    }
+}

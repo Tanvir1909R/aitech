@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  padding: 0 calc((100vw - 1200px) / 2);
+}
+body {
+  overflow-x: hidden;
+}
+.body {
+  transform: translateX(0px);
+  overflow: hidden;
+}
+.body_active {
+  transform: translateX(320px);
+  transition: transform 1s ease, right 1s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+}
+nav a,
+nav .dropdown {
+  transition: all 0.2s ease;
+  padding: 1rem;
+}
+nav a:hover {
+  color: #1346af;
+}
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.195);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s ease;
+}.layout_active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    z-index: 11;
+    border-right: 1px solid #aaa;
+  }
+  nav a {
+    border-top: 1px solid #aaa;
+    display: block;
+    width: 100%;
+  }
+  .shop{
+    border-top: 1px solid #aaa;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+  }
+  .arrow{
+    border-left: 1px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all .3s ease;
+  }.arrow_active{
+    transform: rotate(180deg);
+  }
+  .shop a{
+    border: none;
+  }
+  .shopLink{
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+  }.shopLink_active{
+    pointer-events: all;
+    opacity: 1;
+    height: 115px;
+  }
+  .inputField{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    position: relative;
+  }
+  .inputField input{
+    background-color: #EEEEEC;
+    padding: .8rem 2.2rem .8rem .8rem;
+    outline: none;
+  }
+  .search{
+    position: absolute;
+    top: 34px;
+    right: 10px;
+    cursor: pointer;
+  }
+}
